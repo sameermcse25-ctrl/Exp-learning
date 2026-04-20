@@ -46,3 +46,7 @@ h1, h2 {
     background: linear-gradient(135deg, #ffffff, #f1f1f1);
     color: #2c3e50;
 }
+.card-back {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+}
