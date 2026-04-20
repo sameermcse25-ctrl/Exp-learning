@@ -17,5 +17,7 @@ h1, h2 {
     height: 130px;
  perspective: 1200px;
     margin: 20px 0;
-  
+}
+.card-inner {
+    
 }
