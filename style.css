@@ -26,5 +26,5 @@ h1, h2 {
     transform-style: preserve-3d;
 }
 .card:hover .card-inner {
-    
+    transform: rotateY(180deg);
 }
