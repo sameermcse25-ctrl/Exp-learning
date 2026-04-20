@@ -42,3 +42,7 @@ h1, h2 {
     font-weight: 500;
     transition: all 0.3s;
 }
+.card-front {
+    background: linear-gradient(135deg, #ffffff, #f1f1f1);
+    color: #2c3e50;
+}
