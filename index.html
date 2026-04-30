@@ -1,84 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>language learning app</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LangLearn Website</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1 align="center">Sameer Mahajan</h1>
-    <h1 align="center">CS25170</h1>
-<h2 align="center">Language Learning Flashcards</h2>
-<div class = "card">
-      <div class="card-inner">
-        <div class="card-front">Apple</div>
-        <div class="card-back">सेब</div>
+
+<header>
+    <h2>🌍 Language Learning Website</h2>
+    <nav>
+        <a onclick="showPage('home')">Home</a>
+        <a onclick="showPage('flashcards')">Flashcards</a>
+        <a onclick="showPage('about')">About</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+    <div class="hero">
+        <h1>Learn Languages Smartly</h1>
+        <p>
+            Interactive flashcards with images, animations and multiple languages 
+            to make your learning fast and effective.
+        </p>
+        <button onclick="showPage('flashcards')">Start Learning</button>
+    </div>
+</section>
+
+<!-- FLASHCARDS -->
+<section id="flashcards" class="page">
+
+<h1 style="text-align:center;margin-top:20px;">Flashcards</h1>
+
+<select id="language" onchange="changeLanguage()">
+    <option value="hindi">English → Hindi</option>
+    <option value="japanese">English → Japanese</option>
+</select>
+
+<input type="text" id="search" placeholder="Search..." onkeyup="searchWord()">
+
+<div class="card" id="card">
+    <div class="card-inner">
+        <div class="card-front">
+            <img id="frontImg">
+            <h2 id="frontText"></h2>
+        </div>
+        <div class="card-back">
+            <img id="backImg">
+            <h2 id="backText"></h2>
+        </div>
     </div>
 </div>
-<hr>
- <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">Book</div>
-        <div class="card-back">किताब</div>
-    </div>
- </div>
- <hr>
- <div class = "card">
-    <div class="card-inner">
-        <div class="card-front">Water</div>
-        <div class="card-back">पानी</div>
-    </div>
- </div>
- <hr>
- <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">House</div>
-        <div class="card-back">घर</div>
-    </div>
- </div>
- <hr>
-  <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">Sun</div>
-        <div class="card-back">सूरज</div>
-    </div>
- </div>
- <hr>
-  <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">Moon</div>
-        <div class="card-back">चाँद</div>
-    </div>
- </div>
- <hr>
-  <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">Car</div>
-        <div class="card-back">गाड़ी</div>
-    </div>
-  </div>
-  <hr>
-  <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">Student</div>
-        <div class="card-back">छात्र</div>
-    </div>
-  </div>
-  <hr>
-  <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">Friend</div>
-        <div class="card-back">दोस्त</div>
-    </div>
-  </div>
-  <hr>
-  <div class = "card">
-     <div class="card-inner">
-        <div class="card-front">Bike</div>
-        <div class="card-back">साइकिल</div>
-    </div>
-  </div>
-  <hr>
+
+<div class="controls">
+    <button onclick="flipCard()">Flip</button>
+    <button onclick="prevCard()">⬅ Prev</button>
+    <button onclick="nextCard()">Next ➡</button>
+    <p id="progress"></p>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="page about">
+    <h1>About LangLearn Pro</h1>
+
+    <p>
+        LangLearn Pro is an interactive language learning web application designed 
+        to enhance vocabulary acquisition through visually engaging flashcards. 
+    </p>
+
+    <p>
+        The application uses 3D card flip animations, image-based learning, and 
+        multi-language support to improve memory retention.
+    </p>
+
+    <p>
+        This project demonstrates front-end development concepts including UI design,
+        DOM manipulation, and responsive layout.
+    </p>
+</section>
+
+<script src="script.js"></script>
+
 </body>
 </html>
